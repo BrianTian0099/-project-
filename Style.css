@@ -1,0 +1,81 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+img{
+    object-fit: cover;
+}
+
+
+
+/* body {
+    background-color: rgb(187, 41, 255);
+}
+
+.navbar {
+    top: 25px;
+    padding: 5px 15px;
+    margin: 0;
+    background-color: bisque;
+    border-radius: 25px;
+    justify-content: space-between;
+}
+
+.navbar-brand {
+    text-decoration: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: xx-large;
+    color: blue;
+}
+
+.navbar-nav {
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.container {
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+}
+
+.panel {
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s ease-in-out;
+    height: 400px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    flex: 1;
+}
+
+.panel:hover {
+    flex: 5;
+}
+
+.navbar-btn {
+    justify-content: space-between;
+}
+
+.btn-primary {
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+}
+
+.btn-secondary {
+    opacity: 50%;
+    color: black;
+    border-radius: 25px;
+} */

@@ -4,89 +4,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="../Bootstrap樣式器/css/bootstrap-reboot.css"> -->
+    <link rel="stylesheet" href="../Bootstrap樣式器/css/bootstrap-reboot.css">
     <link rel="stylesheet" href="../Bootstrap樣式器/css/bootstrap.css">
-    <!-- <link rel="stylesheet" href="../Bootstrap樣式器/js/bootstrap.bundle.js"> -->
+    <link rel="stylesheet" href="../Bootstrap樣式器/js/bootstrap.bundle.js">
     <link rel="stylesheet" href="../Bootstrap樣式器/js/bootstrap.js">
     <link rel="stylesheet" href="../共用元件Style.css">
     <title>Document</title>
     <style>
-        /* 此頁獨特的CSS樣式放這 */
+        .panel {
+            background-size: cover;
+            background-position: center;
+            transition: all 0.5s ease-in-out;
+            height: 400px;
+            margin: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .panel.active {
+            flex: 5;
+        }
+        .panel:not(.active) {
+            flex: 1;
+        }
+        .container {
+            display: flex;
+        }
     </style>
 </head>
-
 <body>
     <div class="main">
-
         <!-- =====導航欄目==== -->
-        <div class="d-flex-row">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex">
-                <a href="">Title</a>
-                <div class="navbar navbar-expand-lg navbar-light bg-light option">
-                    <ul>
-                        <li>
-                            <a href="http://">首頁</a>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Title</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-flex" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">首頁</a>
                         </li>
-                        <li>
-                            <a href="http://">產品介紹</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">產品介紹</a>
                         </li>
-                        <li>
-                            <a href="http://">體驗介紹</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">體驗介紹</a>
                         </li>
-                        <li>
-                            <a href="http://">預約&購買</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">預約&購買</a>
                         </li>
-                        <li>
-                            <a href="http://">帳戶中心</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">帳戶中心</a>
                         </li>
                     </ul>
-                </div>
-                <div>
-                    <button><a href="http://">Start!</a></button>
-                    <button><a href="http://">Log in</a></button>
+                    <div class="navbar-btn">
+                        <a class="btn btn-primary text-white" href="#">Start!</a>
+                        <a class="btn btn-secondary text-white ml-2" href="#">Log in</a>
+                    </div>
                 </div>
             </nav>
         </div>
         <!-- =====導航欄目結束==== -->
-
+<br><br>
         <!-- =====第一個視覺頁面==== -->
-        <div>
-
-        </div>
+        <div class="container">
+            <div class="panel active" style="background-image: url('../素材/陶瓷/Firefly 瓷器盤，數量為5，大小一致，整齊排列，白石表面材質，背景乾淨明亮 50596.jpg')">
+              <h3>Explore The World</h3>
+            </div>
+            <div class="panel" style="background-image: url('../素材/陶瓷/Firefly 瓷器盤，數量為5，大小一致，整齊排列，白石表面材質，背景乾淨明亮 50596.jpg')">
+              <h3>Wild Forest</h3>
+            </div>
+            <div class="panel" style="background-image: url('../素材/陶瓷/Firefly 瓷器盤，數量為5，大小一致，整齊排列，白石表面材質，背景乾淨明亮 50596.jpg')">
+              <h3>Sunny Beach</h3>
+            </div>
+            <div class="panel" style="background-image: url('../素材/陶瓷/Firefly 瓷器盤，數量為5，大小一致，整齊排列，白石表面材質，背景乾淨明亮 50596.jpg')">
+              <h3>City on Winter</h3>
+            </div>
+            <div class="panel" style="background-image: url('../素材/陶瓷/Firefly 瓷器盤，數量為5，大小一致，整齊排列，白石表面材質，背景乾淨明亮 50596.jpg')">
+              <h3>Mountains - Clouds</h3>
+            </div>
+          </div>
         <!-- =====第一個視覺頁面結束==== -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-        
-        
     </div>
 
+    <script>
+        const panels = document.querySelectorAll('.panel')
 
+        panels.forEach(panel => {
+            panel.addEventListener('click', () => {
+                removeActiveClasses()
+                panel.classList.add('active')
+            })
+        })
 
-    <!-- =====Script存放位置==== -->
-    
-    
-    
-    <!-- =====Script存放位置結束==== -->
-
-
+        function removeActiveClasses() {
+            panels.forEach(panel => {
+                panel.classList.remove('active')
+            })
+        }
+    </script>
 </body>
-
 </html>

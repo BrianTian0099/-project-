@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面设计</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../Bootstrap樣式器/js/bootstrap.js">
+    <link rel="stylesheet" href="../Bootstrap樣式器/css/bootstrap.css">
+    <link rel="stylesheet" href="../共用元件Style.css">
+    <style>
+       * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #d0e7ff, #fff);
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.carousel {
+    margin: 20px 0;
+}
+
+.cards-section {
+    padding: 50px 0;
+}
+
+.card {
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: #f3f3f3;
+    position: fixed; /* Ensures it stays at the top of the navbar */
+    top: 0;
+    left: 0;
+    z-index: 999; /* Make sure it stays on top of other elements */
+}
+
+.progress-bar {
+    height: 100%;
+    background: #4caf50;
+    width: 0%;
+    transition: width 0.25s;
+}
+
+.content {
+    padding: 20px;
+    margin-top: 60px; /* Adjust this value to avoid content being hidden under the nav */
+}
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">職人市集</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+    </nav>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="../素材/陶瓷/Firefly 瓷器盤，數量為5，大小一致，整齊排列，白石表面材質，背景乾淨明亮 50596.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="../素材/陶瓷/Firefly 陶瓷瓷盤，數量為5，大小一致，整齊排列，白石表面漸層，背景乾淨明亮 26686.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="../素材/陶瓷/Firefly 陶瓷瓷盤，數量為5，大小一致，整齊排列，白石表面漸層，背景乾淨明亮 51289.jpg" alt="Third slide">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <section class="cards-section container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="../素材/人像/Firefly 製陶工藝師，亞洲人男性，正在捏陶，背景明亮，場所為捏陶工作室，等角視角 73998.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">陶品作家</h5>
+                        <p class="card-text">擁有優秀的陶品藝術</p>
+                        <a href="#" class="btn btn-primary">Lets go</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="../素材/人物/Firefly 飯店業者，台灣女性，背景明亮乾淨，場譽為民宿前台 69156.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">朝日民宿</h5>
+                        <p class="card-text">於此新興的民宿中，可做多項體驗包含咖啡體驗及品茶活動</p>
+                        <a href="#" class="btn btn-primary">Lets go</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="../素材/人物/Firefly 蛋糕師傅，日本男性，衣著黑色廚師服，動作為，雙手捧著用盤子裝好的蛋糕面向正面，背景明亮乾淨 73998.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">蛋糕業者</h5>
+                        <p class="card-text">極田蛋糕真好吃</p>
+                        <a href="#" class="btn btn-primary">Lets go</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="../素材/人物/Firefly 木頭雕刻師，亞洲人男性，正在用雕刻刀雕一隻鳥，背景明亮，工作室 69156.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">木雕工藝</h5>
+                        <p class="card-text">來自三義的木雕工藝家</p>
+                        <a href="#" class="btn btn-primary">Lets go</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="../素材/人物/Firefly 泡茶師傅，台灣男性，衣著旗袍服，動作為捧著茶壺到茶，背景明亮乾淨 28231.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">茶藝師傅</h5>
+                        <p class="card-text">小鎮上的一個茶葉師傅，在品茶領域以經營多年</p>
+                        <a href="#" class="btn btn-primary">Lets go</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="../素材/人物/Firefly 自行車的車店老闆，台灣男性，衣著運動衫，動作為雙手叉腰站在6台自行車前面，背景明亮乾淨 28231.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">自行車老闆</h5>
+                        <p class="card-text">好心服務，用心為每位顧客檢查好車況</p>
+                        <a href="#" class="btn btn-primary">Lets go</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    
+    <script>
+        window.onscroll = function () {
+            updateProgressBar();
+        };
+
+        function updateProgressBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
