@@ -9,22 +9,35 @@
 
 img{
     object-fit: cover;
+   
 }
 
 
+.bigCard{
+    padding: 15px;
+    display: flex;
+    box-sizing: border-box;
+    background-color: blanchedalmond;
+    border-radius: 15px;
+    width: 400px;
+    justify-content: center
+    ;
+}
+
+.card-body{
+    padding: 100;
+}
+
+.navbar {
+    font-weight: bolder;
+    padding: 20px;
+}
 
 /* body {
     background-color: rgb(187, 41, 255);
 }
 
-.navbar {
-    top: 25px;
-    padding: 5px 15px;
-    margin: 0;
-    background-color: bisque;
-    border-radius: 25px;
-    justify-content: space-between;
-}
+
 
 .navbar-brand {
     text-decoration: none;
@@ -79,3 +92,56 @@ img{
     color: black;
     border-radius: 25px;
 } */
+
+.section{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.section-item{
+    padding: 15px;
+    display: flex;
+    width: 700px;
+    overflow: hidden;
+    box-shadow: 5px;
+    background-color: rgb(244, 244, 244);
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px darkgrey;
+}
+
+
+.item-body{
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding: 20px;
+width: 50%;
+}
+.section-item>img{
+    object-fit: cover;
+   width: 50%;
+   height: auto;
+}
+
+.item-body h3{
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 50px 0 20px;
+}
+
+.item-body p{
+    font-size: 20px;
+margin: 0 0 30px;
+}
+
+.item-body .button {
+    margin: 50px 0 0 0 ;
+    background-color: #90a1ed;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
